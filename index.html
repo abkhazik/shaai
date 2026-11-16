@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sha.ai — ИИ-видеотуры для недвижимости</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0e0d0c;--card:#181614;--line:#2a2724;--text:#f3efe8;--mute:#a59e93;--gold:#c9a86a}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font:400 16px/1.55 Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+h1,h2,.logo{font-family:Unbounded,sans-serif;font-weight:600;letter-spacing:-.01em}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.logo{font-size:20px}.logo span{color:var(--gold)}
+.btn{display:inline-block;background:var(--gold);color:#16130e;text-decoration:none;font-weight:700;padding:14px 26px;border-radius:999px;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;padding:40px 0 80px}
+.tag{color:var(--gold);font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px}
+h1{font-size:clamp(32px,4.6vw,56px);line-height:1.08;margin-bottom:22px}
+.lead{color:var(--mute);font-size:18px;max-width:520px;margin-bottom:32px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.facts{display:flex;gap:34px;margin-top:40px;flex-wrap:wrap}
+.facts b{display:block;font-family:Unbounded;font-size:22px;color:var(--gold)}
+.facts span{color:var(--mute);font-size:14px}
+.phone{justify-self:center;width:min(320px,100%);aspect-ratio:9/16;border-radius:28px;overflow:hidden;border:6px solid #23201c;box-shadow:0 40px 80px -30px rgba(201,168,106,.35)}
+.phone video{width:100%;height:100%;object-fit:cover;display:block}
+section{padding:70px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(24px,3vw,36px);margin-bottom:10px}
+.sub{color:var(--mute);margin-bottom:36px}
+.grid-h{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.grid-v{display:grid;grid-template-columns:repeat(2,minmax(0,300px));gap:18px;margin-top:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.card video{width:100%;display:block;background:#000}
+.h video{aspect-ratio:16/9}.v video{aspect-ratio:9/16}
+.card .meta{padding:14px 16px}
+.card .meta b{display:block;font-weight:700}
+.card .meta span{color:var(--mute);font-size:14px}
+.plan{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.plan img{width:100%;border-radius:18px;background:#fff;display:block}
+.plan ul{list-style:none;margin-top:20px}
+.plan li{padding:10px 0;border-bottom:1px solid var(--line);color:var(--mute)}
+.plan li::before{content:"— ";color:var(--gold)}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px}
+.svc i{font-style:normal;color:var(--gold);font-family:Unbounded;font-size:14px}
+.svc b{display:block;font-size:18px;margin:10px 0 8px}
+.svc p{color:var(--mute);font-size:15px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s}
+.step{padding:22px 0;border-top:2px solid var(--gold)}
+.step b{display:block;font-size:18px;margin-bottom:6px}
+.step p{color:var(--mute)}
+.final{text-align:center;padding:90px 0}
+.final .lead{margin:0 auto 30px}
+.final .cta{justify-content:center}
+footer{color:var(--mute);font-size:14px;text-align:center;padding:30px 0 40px;border-top:1px solid var(--line)}
+.price{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.pbox{background:var(--card);border:1px solid var(--gold);border-radius:22px;padding:34px}
+.pbox .from{color:var(--mute);font-size:15px}
+.pbox .num{font-family:Unbounded;font-size:clamp(36px,5vw,52px);color:var(--gold);line-height:1.1;margin:6px 0 18px}
+.pbox ul{list-style:none}.pbox li{padding:8px 0;color:var(--text)}.pbox li::before{content:"✓  ";color:var(--gold)}
+@media(max-width:880px){.price{grid-template-columns:1fr}}
+@media(max-width:880px){
+ .hero,.plan{grid-template-columns:1fr}
+ .phone{width:240px}
+ .grid-h,.services,.steps{grid-template-columns:1fr}
+ .grid-v{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <div class="logo">sha<span>.</span>ai</div>
+  <a class="btn ghost" href="https://t.me/sha_ai1" target="_blank" rel="noopener">Написать в Telegram</a>
+</nav>
+
+<header class="hero">
+  <div>
+    <div class="tag">ИИ-видео для недвижимости</div>
+    <h1>Видеотур по квартире — из обычных фотографий</h1>
+    <p class="lead">Без выезда на съёмку, без оператора и дрона. Присылаете фото объекта и получаете живое кинематографичное видео для Авито, ЦИАН и рилсов.</p>
+    <div class="cta">
+      <a class="btn" href="#works">Смотреть работы</a>
+      <a class="btn ghost" href="https://t.me/sha_ai1" target="_blank" rel="noopener">Обсудить объект</a>
+    </div>
+    <div class="facts">
+      <div><b>1–2 дня</b><span>срок готового видео</span></div>
+      <div><b>0 выездов</b><span>нужны только фото</span></div>
+      <div><b>от 5 000 ₽</b><span>за видеотур</span></div>
+    </div>
+  </div>
+  <div class="phone"><video src="v/neoklassika.mp4" poster="v/neoklassika.jpg" autoplay muted loop playsinline></video></div>
+</header>
+</div>
+
+<section id="works"><div class="wrap">
+  <h2>Работы</h2>
+  <p class="sub">Все видео сделаны с помощью ИИ на основе фотографий и дизайн-проектов. Нажмите, чтобы посмотреть со звуком.</p>
+  <div class="grid-h">
+    <div class="card h"><video src="v/fontanka.mp4" poster="v/fontanka.jpg" controls preload="none" playsinline></video><div class="meta"><b>Фонтанка, 76</b><span>Клубный дом · 1 мин</span></div></div>
+    <div class="card h"><video src="v/sport.mp4" poster="v/sport.jpg" controls preload="none" playsinline></video><div class="meta"><b>Спортивная, 2</b><span>Квартира премиум-класса · 1 мин</span></div></div>
+    <div class="card h"><video src="v/classic-flat.mp4" poster="v/classic-flat.jpg" controls preload="none" playsinline></video><div class="meta"><b>Квартира в классическом стиле</b><span>Полный видеотур · 1,5 мин</span></div></div>
+  </div>
+  <div class="grid-v">
+    <div class="card v"><video src="v/klassika.mp4" poster="v/klassika.jpg" controls preload="none" playsinline></video><div class="meta"><b>Дизайн-проект «Классика»</b><span>Рилс с героем · 30 сек</span></div></div>
+    <div class="card v"><video src="v/neoklassika.mp4" poster="v/neoklassika.jpg" controls preload="none" playsinline></video><div class="meta"><b>Дизайн-проект «Неоклассика»</b><span>Рилс-история · 30 сек</span></div></div>
+  </div>
+</div></section>
+
+<section><div class="wrap plan">
+  <img src="v/plan.jpg" alt="Пример планировки пентхауса">
+  <div>
+    <h2>Планировки</h2>
+    <p class="sub" style="margin-bottom:0">Аккуратные 2D-планировки с мебелью, площадями и видовыми точками, а также 3D-визуализация по вашему чертежу.</p>
+    <ul>
+      <li>2D-планировка в едином стиле</li>
+      <li>3D-изометрия квартиры целиком</li>
+      <li>По чертежу из БТИ или AutoCAD</li>
+    </ul>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Что я делаю</h2>
+  <p class="sub">Всё, чтобы объект выделялся на фоне конкурентов и быстрее продавался.</p>
+  <div class="services">
+    <div class="svc"><i>01</i><b>Видеотур из фото</b><p>Плавный проход по квартире, как будто снимали на стабилизатор. Вертикально и горизонтально.</p></div>
+    <div class="svc"><i>02</i><b>Рилсы с героями</b><p>Короткие истории с людьми в интерьере: «новосёлы», «утро в квартире». Хорошо цепляют в соцсетях.</p></div>
+    <div class="svc"><i>03</i><b>Виртуальная мебель</b><p>Пустую квартиру или новостройку без отделки обставляю мебелью на фото и видео.</p></div>
+    <div class="svc"><i>04</i><b>До / после ремонта</b><p>Показываю, какой может стать квартира в плохом состоянии. Помогает продавать вторичку.</p></div>
+    <div class="svc"><i>05</i><b>2D/3D-планировки</b><p>Понятные красивые планировки, которые хочется рассматривать.</p></div>
+    <div class="svc"><i>06</i><b>Сайт-каталог под ключ</b><p>Мини-сайт с объектами агентства или ЖК: фото, видео, планировки, контакты.</p></div>
+  </div>
+</div></section>
+
+<section id="price"><div class="wrap price">
+  <div>
+    <h2>Сколько стоит</h2>
+    <p class="sub" style="margin-bottom:0">Без выезда на объект, поэтому дешевле обычной видеосъёмки. Точную цену назову по фото: она зависит от количества комнат и длины ролика.</p>
+  </div>
+  <div class="pbox">
+    <div class="from">Видеотур по квартире</div>
+    <div class="num">от 5 000 ₽</div>
+    <ul>
+      <li>Оплата после просмотра готового видео</li>
+      <li>Готово за 1–2 дня</li>
+      <li>Скидка, если объектов несколько</li>
+    </ul>
+    <a class="btn" style="margin-top:22px" href="https://t.me/sha_ai1" target="_blank" rel="noopener">Узнать цену для своего объекта</a>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Как это работает</h2>
+  <p class="sub">Три шага, никаких выездов.</p>
+  <div class="steps">
+    <div class="step"><b>1. Присылаете фото</b><p>Обычные фото объекта, планировку, если есть, и пожелания по стилю.</p></div>
+    <div class="step"><b>2. Я собираю видео</b><p>Генерирую сцены, монтирую, добавляю музыку. Обычно 1–2 дня.</p></div>
+    <div class="step"><b>3. Оплата после просмотра</b><p>Смотрите готовый результат и оплачиваете, когда он вас устраивает.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Не только недвижимость</h2>
+  <p class="sub">Всё делаю через нейросети, поэтому могу сделать почти любое видео или визуал под вашу задачу.</p>
+  <div class="services">
+    <div class="svc"><b>Реклама</b><p>Ролики для товаров, брендов и бизнеса без съёмочной группы.</p></div>
+    <div class="svc"><b>Контент для соцсетей</b><p>Рилсы и короткие видео для Instagram, TikTok и Telegram, в том числе на регулярной основе.</p></div>
+    <div class="svc"><b>Клипы, мини-фильмы и мультфильмы</b><p>Сюжетные ролики с героями, от тизера до короткого фильма.</p></div>
+  </div>
+</div></section>
+
+<section id="contact" class="final"><div class="wrap">
+  <h2>Обсудим ваш объект?</h2>
+  <p class="lead">Пришлите фото любой квартиры, и я назову цену и срок.</p>
+  <div class="cta">
+    <a class="btn" href="https://t.me/sha_ai1" target="_blank" rel="noopener">Написать в Telegram @sha_ai1</a>
+  </div>
+  <p style="color:var(--mute);margin-top:28px;font-size:15px">Больше работ в соцсетях: <a href="https://www.instagram.com/sha_ai_1/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.tiktok.com/@sha_ai_1" target="_blank" rel="noopener">TikTok</a> · @sha_ai_1</p>
+</div></section>
+
+<footer>sha.ai · ИИ-видео для недвижимости</footer>
+</body>
+</html>
